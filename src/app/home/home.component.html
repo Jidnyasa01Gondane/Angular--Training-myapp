@@ -1,0 +1,23 @@
+<p>
+  home works!
+</p>
+<table border="1" >
+  <tr>
+    <th>Employee ID</th>
+    <th>Employee Name</th>
+    <th>Employee Number</th>
+    <th>Employee Details</th>
+  </tr>
+  <tr *ngFor="let items of EmpDetails" >
+    <td>{{items.eId}}</td>
+    <td>{{items.eName}}</td>
+    <td>{{items.eNumber}}</td>
+    <td>{{items.eBgroup}}</td>
+    <td>
+      <!--<a [routerLink]="['details', items.eId]">Employee Details</a>-->
+      <button (click)="ShowDetails(items.eId,items.eBgroup)">Show</button>
+    </td>
+  </tr>
+</table>
+<router-outlet></router-outlet>
+<br>

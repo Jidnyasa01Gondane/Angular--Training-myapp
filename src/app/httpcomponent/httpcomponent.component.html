@@ -1,0 +1,21 @@
+<p>
+  httpcomponent works!
+</p>
+<button (click) = "getAllPosts()">Get All Posts</button>
+<!--<p>
+  {{dataArray | json}}
+</p>-->
+<table border="1" >
+  <tr>
+    <th>Post User ID</th>
+    <th>Post ID </th>
+    <th>Post Title</th>
+    <th>Post Body</th>
+  </tr>
+  <tr *ngFor="let items of dataArray" >
+    <td>{{items.userId}}</td>
+    <td>{{items.id}}</td>
+    <td>{{items.title}}</td>
+    <td>{{items.body}}</td>
+  </tr>
+</table>
